@@ -29,7 +29,22 @@ if (newY > 12 && newY < room_height - 12) {
 
 #region Facing
 
-var dir = point_direction(x, y, mouse_x, mouse_y);
+dir = point_direction(x, y, mouse_x, mouse_y);
 image_angle = dir;
+
+#endregion
+
+#region Shooting
+
+if (mouse_check_button_pressed(mb_left)) {
+	// TODO - Sound effect
+	
+	var bullet = instance_create_layer(x, y, "Instances", oBullet);
+	with (bullet) {
+		x = other.x;
+		y = other.y;
+		direction = other.dir;	
+	}
+}
 
 #endregion

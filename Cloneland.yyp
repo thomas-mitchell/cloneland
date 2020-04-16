@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "66feeb1c-8ad8-4dd4-955f-151aa124e159",
+            "Value": {
+                "id": "f88aa961-1c79-4a9f-9444-0717b8818a6b",
+                "resourcePath": "objects\\oZombie\\oZombie.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "676ed7bb-d112-4105-9ff5-34ce8c7ab455",
             "Value": {
                 "id": "e6f53d27-389d-4f90-83d0-8678984ad765",
@@ -115,6 +123,14 @@
             "Value": {
                 "id": "954bbb2c-602a-406a-9bd7-dad5e3892173",
                 "resourcePath": "sprites\\sZombie\\sZombie.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "740e9e0a-b22a-45d1-8395-be20f5cede20",
+            "Value": {
+                "id": "1db0d743-5fe4-4024-80b5-228be967beb8",
+                "resourcePath": "sprites\\sBullet\\sBullet.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -151,6 +167,14 @@
             }
         },
         {
+            "Key": "93223a6e-1c8f-47dc-beaf-82adbfc3e742",
+            "Value": {
+                "id": "b6593b6d-4ba5-4077-863f-3c9fa9966dd0",
+                "resourcePath": "objects\\oZombieSpawner\\oZombieSpawner.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "938d67f8-9ec8-4eb5-a0d5-11a135459986",
             "Value": {
                 "id": "0f017ee4-8192-4c96-9560-c2f98cacd9fe",
@@ -172,6 +196,22 @@
                 "id": "86601ad9-8d62-413d-a4c1-2b92e8586ec6",
                 "resourcePath": "sprites\\sTilesheet_01\\sTilesheet_01.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a40313b3-9367-45d0-a300-fbeef153534e",
+            "Value": {
+                "id": "946f8bce-2066-445c-9246-f3f4c50283bc",
+                "resourcePath": "scripts\\collision_line_first\\collision_line_first.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a8899526-e75a-4725-8c78-26a1ae58d2b4",
+            "Value": {
+                "id": "db96f8fa-a709-4b04-91f9-f8a5fa695a88",
+                "resourcePath": "objects\\oBullet\\oBullet.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -264,7 +304,7 @@
         }
     ],
     "script_order": [
-        
+        "a40313b3-9367-45d0-a300-fbeef153534e"
     ],
     "tutorial": ""
 }

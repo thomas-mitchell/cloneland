@@ -1,28 +1,28 @@
 {
-    "id": "784cd031-9143-4af0-852d-340893f4f003",
+    "id": "93223a6e-1c8f-47dc-beaf-82adbfc3e742",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oController",
+    "name": "oZombieSpawner",
     "eventList": [
         {
-            "id": "fee50aae-c6bc-4b95-9e26-065bf9143bd9",
+            "id": "a3b94de7-cd10-459d-b3e3-3f8779050c2a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "784cd031-9143-4af0-852d-340893f4f003"
+            "m_owner": "93223a6e-1c8f-47dc-beaf-82adbfc3e742"
         },
         {
-            "id": "4181cdb2-0bd4-44ba-b7aa-eacae1e77255",
+            "id": "3b806500-5e55-4e57-aca4-3068f87e7535",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 32,
-            "eventtype": 5,
-            "m_owner": "784cd031-9143-4af0-852d-340893f4f003"
+            "enumb": 0,
+            "eventtype": 2,
+            "m_owner": "93223a6e-1c8f-47dc-beaf-82adbfc3e742"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
