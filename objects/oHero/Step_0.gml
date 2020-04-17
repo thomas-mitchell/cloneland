@@ -37,13 +37,24 @@ image_angle = dir;
 #region Shooting
 
 if (mouse_check_button_pressed(mb_left)) {
-	// TODO - Sound effect
+	// Sound effect
+	audio_play_sound(sndPistolShot, 0, false);
 	
+	// Determine bullet target
+	var targetBaseX = reticle.x;
+	var targetBaseY = reticle.y;
+	var targetRadius = reticle.radius;
+	var targetDirection = irandom_range(0, 359);
+	var targetX = targetBaseX + lengthdir_x(targetRadius, targetDirection);
+	var targetY = targetBaseY + lengthdir_y(targetRadius, targetDirection);
+	bulletDirection = point_direction(x, y, targetX, targetY);
+	
+	// Create bullet
 	var bullet = instance_create_layer(x, y, "Instances", oBullet);
 	with (bullet) {
 		x = other.x;
 		y = other.y;
-		direction = other.dir;	
+		direction = other.bulletDirection;	
 	}
 }
 

@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0ab1da5e-91c2-4cf6-bce6-69bd35c9551a",
+            "Value": {
+                "id": "150d0e55-df0f-460c-a546-5f6627165771",
+                "resourcePath": "sounds\\sndPistolShot\\sndPistolShot.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "1bd0486c-0afb-4e91-9ca4-4bbc29cd3236",
             "Value": {
                 "id": "f59b9884-c333-447d-b108-ff547e80aa15",
