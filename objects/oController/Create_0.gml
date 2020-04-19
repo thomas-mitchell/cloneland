@@ -8,7 +8,7 @@ enum RES {
 }
 
 // Create camera
-var _camera = camera_create_view(0, 0, RES.WIDTH, RES.HEIGHT, 0, oHero, -1, -1, RES.WIDTH / 2, RES.HEIGHT / 2);
+var _camera = camera_create_view(0, 0, RES.WIDTH, RES.HEIGHT, 0, oPlayer, -1, -1, RES.WIDTH / 2, RES.HEIGHT / 2);
 
 // Set up view
 view_enabled = true;

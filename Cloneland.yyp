@@ -290,7 +290,7 @@
             "Key": "f222450c-a619-4bbc-afc2-d316a5f9f848",
             "Value": {
                 "id": "72cdbfa2-6965-495e-bca7-25939aa9790d",
-                "resourcePath": "objects\\oHero\\oHero.yy",
+                "resourcePath": "objects\\oPlayer\\oPlayer.yy",
                 "resourceType": "GMObject"
             }
         },

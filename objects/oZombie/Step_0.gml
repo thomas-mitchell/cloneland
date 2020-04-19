@@ -6,9 +6,9 @@ if (hp <= 0) {
 }
 
 // Move
-if (instance_exists(oHero)) {
-	targetX = oHero.x;
-	targetY = oHero.y;
+if (instance_exists(oPlayer)) {
+	targetX = oPlayer.x;
+	targetY = oPlayer.y;
 }
 	
 if (point_distance(x, y, targetX, targetY) > moveSpeed) {
@@ -24,4 +24,4 @@ x += inputX * moveSpeed;
 y += inputY * moveSpeed;
 
 // Face hero
-image_angle = point_direction(x, y, oHero.x, oHero.y);
+image_angle = point_direction(x, y, oPlayer.x, oPlayer.y);

@@ -8,5 +8,6 @@ moveY = 0;
 
 // Create reticle
 reticle = instance_create_layer(mouse_x, mouse_y, "Instances", oReticle);
+aimAngle = 30;
 
 bulletDirection = 0; // Direction to fire bullet

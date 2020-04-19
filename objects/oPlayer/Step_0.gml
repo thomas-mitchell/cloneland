@@ -1,7 +1,6 @@
 /// @description
 
 #region Movement
-
 var _right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 var _left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 var _up = keyboard_check(vk_up) || keyboard_check(ord("W"));
@@ -23,31 +22,26 @@ if (newX > 12 && newX < room_width - 12) {
 if (newY > 12 && newY < room_height - 12) {
 	y = newY;	
 }
-
-
 #endregion
 
 #region Facing
-
 dir = point_direction(x, y, mouse_x, mouse_y);
 image_angle = dir;
+#endregion
 
+#region Aiming
+reticle.aimAngle = aimAngle;
 #endregion
 
 #region Shooting
-
 if (mouse_check_button_pressed(mb_left)) {
 	// Sound effect
 	audio_play_sound(sndPistolShot, 0, false);
 	
-	// Determine bullet target
-	var targetBaseX = reticle.x;
-	var targetBaseY = reticle.y;
-	var targetRadius = reticle.radius;
-	var targetDirection = irandom_range(0, 359);
-	var targetX = targetBaseX + lengthdir_x(targetRadius, targetDirection);
-	var targetY = targetBaseY + lengthdir_y(targetRadius, targetDirection);
-	bulletDirection = point_direction(x, y, targetX, targetY);
+	// Determine bullet direction
+	var aimDirection = point_direction(x, y, oReticle.x, oReticle.y);
+	var aimOffset = random_range(-aimAngle/2, aimAngle/2);
+	bulletDirection = aimDirection + aimOffset;
 	
 	// Create bullet
 	var bullet = instance_create_layer(x, y, "Instances", oBullet);
@@ -57,5 +51,4 @@ if (mouse_check_button_pressed(mb_left)) {
 		direction = other.bulletDirection;	
 	}
 }
-
 #endregion
