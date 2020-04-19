@@ -7,4 +7,4 @@ draw_primitive_end();
 
 
 // Draw bullet
-draw_self();
+//draw_self();

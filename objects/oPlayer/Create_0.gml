@@ -12,14 +12,8 @@ aimAngle = 20;
 
 bulletDirection = 0; // Direction to fire bullet
 
-// Gun settings
-pistolAmmoMax = 15;
-pistolShotCooldown = 20;	// In frames
-pistolShotSound = sndPistolShot;
-pistolReloadTime = 50;	// In frames
-pistolReloadSound = sndPistolReload;
-
 // Gun related variables
+selectedGun = GUN.SMG;
 shotCooldown = 0;
-currentAmmo = pistolAmmoMax;
+currentAmmo = global.gunMaxAmmo[selectedGun];
 reloadCooldown = 0;

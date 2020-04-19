@@ -34,9 +34,13 @@ reticle.aimAngle = aimAngle;
 #endregion
 
 #region Shooting
-if (mouse_check_button_pressed(mb_left) && shotCooldown <= 0 && reloadCooldown <= 0 && currentAmmo > 0) {
+if (shotCooldown <= 0 && 
+	reloadCooldown <= 0 &&
+	currentAmmo > 0 &&
+	(mouse_check_button_pressed(mb_left) || (global.gunFiringMode[selectedGun] == "Auto" && mouse_check_button(mb_left)))
+	) {
 	// Sound effect
-	audio_play_sound(pistolShotSound, 0, false);
+	audio_play_sound(global.gunShotSound[selectedGun], 0, false);
 	
 	// Determine bullet direction
 	var aimDirection = point_direction(x, y, oReticle.x, oReticle.y);
@@ -55,7 +59,7 @@ if (mouse_check_button_pressed(mb_left) && shotCooldown <= 0 && reloadCooldown <
 	currentAmmo--;
 	
 	// Start cooldown
-	shotCooldown = pistolShotCooldown;
+	shotCooldown = global.gunShotCooldown[selectedGun];
 }
 else if (shotCooldown > 0) {
 	shotCooldown--;	
@@ -65,13 +69,31 @@ else if (shotCooldown > 0) {
 #region Reloading
 if (reloadCooldown == 0 && (currentAmmo == 0 || keyboard_check_pressed(ord("R"))) ) {
 	// Sound effect
-	audio_play_sound(pistolReloadSound, 0, false);
-	reloadCooldown = pistolReloadTime;
+	audio_play_sound(global.gunReloadSound[selectedGun], 0, false);
+	reloadCooldown = global.gunReloadCooldown[selectedGun];
 }
 else if (reloadCooldown > 0) {
 	reloadCooldown--;
 	if (reloadCooldown == 0) {
-		currentAmmo = pistolAmmoMax;	
+		currentAmmo = global.gunMaxAmmo[selectedGun];	
 	}
 }
+#endregion
+
+#region Switch gun
+var newGun = noone;
+if (selectedGun != GUN.PISTOL && keyboard_check_pressed(ord("1"))) {
+	newGun = GUN.PISTOL;	
+}
+else if (selectedGun != GUN.SMG && keyboard_check_pressed(ord("2"))) {
+	newGun = GUN.SMG;	
+}
+
+if (newGun != noone) {
+	selectedGun = newGun;
+	currentAmmo = global.gunMaxAmmo[newGun];
+	shotCooldown = 0;
+	reloadCooldown = 0;
+}
+
 #endregion

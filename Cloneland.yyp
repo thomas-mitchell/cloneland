@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "0121951f-432c-4298-ad6a-fc94ae4dcdf5",
+            "Value": {
+                "id": "7af785fb-dcd4-4c0b-8317-84a7d311b80f",
+                "resourcePath": "sounds\\sndSmgShot\\sndSmgShot.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "02d7d8d5-4f54-4756-9be1-fc146cca2bb4",
             "Value": {
                 "id": "90e9eefa-a8db-44e1-8132-40e6b03fae26",
@@ -151,6 +159,14 @@
             }
         },
         {
+            "Key": "725b9df5-b0bb-4d97-8177-cec58d1173bf",
+            "Value": {
+                "id": "9aa873a2-340d-4ee0-9cd9-ce714d72a10c",
+                "resourcePath": "scripts\\initGuns\\initGuns.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "740e9e0a-b22a-45d1-8395-be20f5cede20",
             "Value": {
                 "id": "1db0d743-5fe4-4024-80b5-228be967beb8",
@@ -263,10 +279,26 @@
             }
         },
         {
+            "Key": "ae288c99-ecc8-499c-8749-2b7298ca3ade",
+            "Value": {
+                "id": "f5253f2a-7d4b-4f14-995d-5775d7c746eb",
+                "resourcePath": "scripts\\initGun\\initGun.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bdb90b0e-5867-416a-82b6-c957835f1ae5",
             "Value": {
                 "id": "ad824df1-d593-4afa-aa5d-089e45df36cb",
                 "resourcePath": "views\\bdb90b0e-5867-416a-82b6-c957835f1ae5.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c1ad58b0-e8e1-407c-b2ec-bfd6b4ca036d",
+            "Value": {
+                "id": "c3a43105-f3b9-48f6-94b5-12631d51a8a8",
+                "resourcePath": "views\\c1ad58b0-e8e1-407c-b2ec-bfd6b4ca036d.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -328,7 +360,9 @@
         }
     ],
     "script_order": [
-        "a40313b3-9367-45d0-a300-fbeef153534e"
+        "a40313b3-9367-45d0-a300-fbeef153534e",
+        "725b9df5-b0bb-4d97-8177-cec58d1173bf",
+        "ae288c99-ecc8-499c-8749-2b7298ca3ade"
     ],
     "tutorial": ""
 }
