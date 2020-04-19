@@ -79,11 +79,27 @@
             }
         },
         {
+            "Key": "42700eda-f82b-4164-9dca-6266c0fb099d",
+            "Value": {
+                "id": "9caa2d4c-f875-4481-9a17-2e276f786984",
+                "resourcePath": "sounds\\sndPistolReload\\sndPistolReload.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "4a55f93c-01db-4636-9494-978e7932d982",
             "Value": {
                 "id": "e600c035-d156-433a-b9f4-cb313058b536",
                 "resourcePath": "sprites\\sHero\\sHero.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "53344031-7b54-4c7e-8737-0f882ee192dd",
+            "Value": {
+                "id": "0de1571e-afa3-4167-b332-77b02710710d",
+                "resourcePath": "fonts\\fForward\\fForward.yy",
+                "resourceType": "GMFont"
             }
         },
         {

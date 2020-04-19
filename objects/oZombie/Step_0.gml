@@ -5,7 +5,7 @@ if (hp <= 0) {
 	instance_destroy();	
 }
 
-// Move
+// Determine desired movement
 if (instance_exists(oPlayer)) {
 	targetX = oPlayer.x;
 	targetY = oPlayer.y;
@@ -20,8 +20,21 @@ else {
 	inputY = 0;
 }
 
-x += inputX * moveSpeed;
-y += inputY * moveSpeed;
+// Check movement is allowed
+var movementAllowed = true;
+var newX = x + inputX * moveSpeed;
+var newY = y + inputY * moveSpeed;
+
+// Check for collision with other zombie
+if (place_meeting(newX, newY, oZombie)) {
+	movementAllowed = false;	
+}
+
+// TODO - Buggy, zombies get stuck on each other
+//if (movementAllowed) {
+	x += inputX * moveSpeed;
+	y += inputY * moveSpeed;
+//}
 
 // Face hero
 image_angle = point_direction(x, y, oPlayer.x, oPlayer.y);

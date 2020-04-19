@@ -34,9 +34,9 @@ reticle.aimAngle = aimAngle;
 #endregion
 
 #region Shooting
-if (mouse_check_button_pressed(mb_left)) {
+if (mouse_check_button_pressed(mb_left) && shotCooldown <= 0 && reloadCooldown <= 0 && currentAmmo > 0) {
 	// Sound effect
-	audio_play_sound(sndPistolShot, 0, false);
+	audio_play_sound(pistolShotSound, 0, false);
 	
 	// Determine bullet direction
 	var aimDirection = point_direction(x, y, oReticle.x, oReticle.y);
@@ -49,6 +49,29 @@ if (mouse_check_button_pressed(mb_left)) {
 		x = other.x;
 		y = other.y;
 		direction = other.bulletDirection;	
+	}
+	
+	// Reduce ammo
+	currentAmmo--;
+	
+	// Start cooldown
+	shotCooldown = pistolShotCooldown;
+}
+else if (shotCooldown > 0) {
+	shotCooldown--;	
+}
+#endregion
+
+#region Reloading
+if (reloadCooldown == 0 && (currentAmmo == 0 || keyboard_check_pressed(ord("R"))) ) {
+	// Sound effect
+	audio_play_sound(pistolReloadSound, 0, false);
+	reloadCooldown = pistolReloadTime;
+}
+else if (reloadCooldown > 0) {
+	reloadCooldown--;
+	if (reloadCooldown == 0) {
+		currentAmmo = pistolAmmoMax;	
 	}
 }
 #endregion
