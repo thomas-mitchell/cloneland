@@ -71,7 +71,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "af4f21ae-83fb-4a82-83fb-2184a4a02385",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "$FF4298B7",
+            "varName": "trailColor",
+            "varType": 7
+        }
+    ],
     "solid": false,
     "spriteId": "740e9e0a-b22a-45d1-8395-be20f5cede20",
     "visible": true

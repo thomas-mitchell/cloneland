@@ -1,6 +1,6 @@
 /// @description
 
-speed = 20;
+speed = 14;
 direction = 0;
 
 fastCollision = true;

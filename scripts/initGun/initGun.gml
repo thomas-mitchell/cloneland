@@ -5,6 +5,9 @@
 /// @arg shotCooldown
 /// @arg reloadCooldown
 /// @arg firingMode
+/// @arg aimAngleShotIncrease
+/// @arg maxAimAngle
+/// @arg aimSpeed
 /// @arg shotSound
 /// @arg reloadSound
 
@@ -15,5 +18,8 @@ global.gunMaxAmmo[_gun] = argument[2];
 global.gunShotCooldown[_gun] = argument[3]
 global.gunReloadCooldown[_gun] = argument[4];
 global.gunFiringMode[_gun] = argument[5];
-global.gunShotSound[_gun] = argument[6];
-global.gunReloadSound[_gun] = argument[7];
+global.gunAimAngleShotIncrease[_gun] = argument[6];
+global.gunMaxAimAngle[_gun] = argument[7];
+global.gunAimSpeed[_gun] = argument[8];
+global.gunShotSound[_gun] = argument[9];
+global.gunReloadSound[_gun] = argument[10];

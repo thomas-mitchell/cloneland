@@ -30,6 +30,15 @@ image_angle = dir;
 #endregion
 
 #region Aiming
+// Update aim angle
+if (aimAngle > 0) {
+	aimAngle -= global.gunAimSpeed[selectedGun];
+	if (aimAngle < 0) {
+		aimAngle = 0;	
+	}
+}
+
+// Pass aim angle to reticle
 reticle.aimAngle = aimAngle;
 #endregion
 
@@ -57,6 +66,12 @@ if (shotCooldown <= 0 &&
 	
 	// Reduce ammo
 	currentAmmo--;
+	
+	// Increase aim angle
+	aimAngle += global.gunAimAngleShotIncrease[selectedGun];
+	if (aimAngle > global.gunMaxAimAngle[selectedGun]) {
+		aimAngle = global.gunMaxAimAngle[selectedGun];	
+	}
 	
 	// Start cooldown
 	shotCooldown = global.gunShotCooldown[selectedGun];
