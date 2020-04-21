@@ -30,11 +30,16 @@ if (place_meeting(newX, newY, oZombie)) {
 	movementAllowed = false;	
 }
 
+// Check for collision with player
+if (place_meeting(newX, newY, oPlayer)) {
+	movementAllowed = false;	
+}
+
 // TODO - Buggy, zombies get stuck on each other
-//if (movementAllowed) {
+if (movementAllowed) {
 	x += inputX * moveSpeed;
 	y += inputY * moveSpeed;
-//}
+}
 
 // Face hero
-image_angle = point_direction(x, y, oPlayer.x, oPlayer.y);
+//image_angle = point_direction(x, y, oPlayer.x, oPlayer.y);

@@ -9,11 +9,11 @@ var aimTriangleCounterClockPointX = oPlayer.x + lengthdir_x(aimTriangleLength, a
 var aimTriangleCounterClockPointY = oPlayer.y + lengthdir_y(aimTriangleLength, aimDirection + aimAngle/2);
 
 // Draw aim triangle
-draw_set_color(c_green);
-draw_set_alpha(0.5);
-draw_triangle(oPlayer.x, oPlayer.y, aimTriangleCounterClockPointX, aimTriangleCounterClockPointY, aimTriangleClockPointX, aimTriangleClockPointY, false);
-draw_set_color(c_white);
-draw_set_alpha(1);
+//draw_set_color(c_green);
+//draw_set_alpha(0.5);
+//draw_triangle(oPlayer.x, oPlayer.y, aimTriangleCounterClockPointX, aimTriangleCounterClockPointY, aimTriangleClockPointX, aimTriangleClockPointY, false);
+//draw_set_color(c_white);
+//draw_set_alpha(1);
 
 // Calculate reticle radius
 var reticleDistance = point_distance(oPlayer.x, oPlayer.y, x, y);
