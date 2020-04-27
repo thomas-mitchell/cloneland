@@ -9,7 +9,7 @@ moveY = 0;
 // Create reticle
 reticle = instance_create_layer(mouse_x, mouse_y, "Instances", oReticle);
 
-bulletDirection = 0; // Direction to fire bullet
+projectileDirection = 0; // Direction to fire shot
 
 // Gun related variables
 selectedGun = GUN.SMG;

@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "a942be26-2e9d-4e20-9b49-a79de21730c7",
+            "Value": {
+                "id": "94ef022d-5785-4f6a-89a4-dd32c062dd07",
+                "resourcePath": "sounds\\sndShotgunReload\\sndShotgunReload.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "ac4638ef-c768-49a5-a4cc-c3e804c1e957",
             "Value": {
                 "id": "f447944c-ce4d-46fc-be8e-443ce81383cf",
@@ -316,6 +324,14 @@
                 "id": "de4f916a-d518-4fe6-8a99-6d458d6582e6",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "df1ba41d-3655-4ddb-94c4-f275227bdf53",
+            "Value": {
+                "id": "1ce116e4-d4f1-41b6-b752-476f94d199de",
+                "resourcePath": "sounds\\sndShotgunShot\\sndShotgunShot.yy",
+                "resourceType": "GMSound"
             }
         },
         {

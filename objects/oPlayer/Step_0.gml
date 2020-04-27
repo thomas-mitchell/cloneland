@@ -51,17 +51,23 @@ if (shotCooldown <= 0 &&
 	// Sound effect
 	audio_play_sound(global.gunShotSound[selectedGun], 0, false);
 	
-	// Determine bullet direction
+	// Determine shot direction
 	var aimDirection = point_direction(x, y, oReticle.x, oReticle.y);
 	var aimOffset = random_range(-aimAngle/2, aimAngle/2);
-	bulletDirection = aimDirection + aimOffset;
+	var shotDirection = aimDirection + aimOffset;
 	
-	// Create bullet
-	var bullet = instance_create_layer(x, y, "Instances", oBullet);
-	with (bullet) {
-		x = other.x;
-		y = other.y;
-		direction = other.bulletDirection;	
+	// Create projectiles
+	for(var index = 0; index < global.gunProjectilesPerShot[selectedGun]; index++) {
+		var projectileMaxOffset = global.gunProjectileSpread[selectedGun];
+		var projectileOffset = random_range(-projectileMaxOffset/2, projectileMaxOffset/2);
+		projectileDirection = shotDirection + projectileOffset;
+		
+		var bullet = instance_create_layer(x, y, "Instances", oBullet);
+		with (bullet) {
+			x = other.x;
+			y = other.y;
+			direction = other.projectileDirection;	
+		}
 	}
 	
 	// Reduce ammo
@@ -102,6 +108,9 @@ if (selectedGun != GUN.PISTOL && keyboard_check_pressed(ord("1"))) {
 }
 else if (selectedGun != GUN.SMG && keyboard_check_pressed(ord("2"))) {
 	newGun = GUN.SMG;	
+}
+else if(selectedGun != GUN.SHOTGUN && keyboard_check_pressed(ord("3"))) {
+	newGun = GUN.SHOTGUN;	
 }
 
 if (newGun != noone) {

@@ -8,6 +8,8 @@
 /// @arg aimAngleShotIncrease
 /// @arg maxAimAngle
 /// @arg aimSpeed
+/// @arg projectilesPerShot
+/// @arg projectileSpread
 /// @arg shotSound
 /// @arg reloadSound
 
@@ -21,5 +23,7 @@ global.gunFiringMode[_gun] = argument[5];
 global.gunAimAngleShotIncrease[_gun] = argument[6];
 global.gunMaxAimAngle[_gun] = argument[7];
 global.gunAimSpeed[_gun] = argument[8];
-global.gunShotSound[_gun] = argument[9];
-global.gunReloadSound[_gun] = argument[10];
+global.gunProjectilesPerShot[_gun] = argument[9];
+global.gunProjectileSpread[_gun] = argument[10];
+global.gunShotSound[_gun] = argument[11];
+global.gunReloadSound[_gun] = argument[12];
