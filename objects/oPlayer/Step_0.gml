@@ -66,7 +66,8 @@ if (shotCooldown <= 0 &&
 		with (bullet) {
 			x = other.x;
 			y = other.y;
-			direction = other.projectileDirection;	
+			direction = other.projectileDirection;
+			damage = global.gunDamage[other.selectedGun];
 		}
 	}
 	

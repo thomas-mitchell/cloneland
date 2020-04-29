@@ -20,10 +20,21 @@ else {
 	inputY = 0;
 }
 
+// Get movement speed
+var moveX = inputX * moveSpeed;
+var moveY = inputY * moveSpeed;
+
+// Boost
+moveX += round(boostX);
+moveY += round(boostY);
+
+boostX = lerp(boostX, 0, 0.1);
+boostY = lerp(boostY, 0, 0.1);
+
 // Check movement is allowed
 var movementAllowed = true;
-var newX = x + inputX * moveSpeed;
-var newY = y + inputY * moveSpeed;
+var newX = x + moveX;
+var newY = y + moveY;
 
 // Check for collision with other zombie
 if (place_meeting(newX, newY, oZombie)) {
@@ -35,10 +46,10 @@ if (place_meeting(newX, newY, oPlayer)) {
 	movementAllowed = false;	
 }
 
-// TODO - Buggy, zombies get stuck on each other
+
 if (movementAllowed) {
-	x += inputX * moveSpeed;
-	y += inputY * moveSpeed;
+	x = newX;
+	y = newY;
 }
 
 // Face hero

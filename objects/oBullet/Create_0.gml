@@ -5,3 +5,6 @@ direction = 0;
 
 fastCollision = true;
 damage = 1;
+
+initialX = 0;
+initialY = 0;
