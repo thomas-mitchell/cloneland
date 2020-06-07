@@ -2,6 +2,9 @@
 
 // Die
 if (hp <= 0) {
+	var deadZombie = instance_create_layer(x, y, "Bodies", oZombieDead);
+	var sprite_angle = point_direction(x, y, oPlayer.x, oPlayer.y);
+	deadZombie.image_angle = sprite_angle;
 	instance_destroy();	
 }
 
